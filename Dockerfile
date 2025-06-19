@@ -8,8 +8,4 @@ RUN apt-get update && \
 
 # 安装 yarn1 和其他全局包
 RUN npm install -g node-gyp @electron/node-gyp
-# 添加pnpm存储库并导入其GPG密钥
-RUN curl -fsSL https://get.pnpm.io/install.sh | sh -
-
-# 更新包索引并安装pnpm
-RUN apt update && apt install pnpm
+RUN npm i -g pnpm@10.11.0
